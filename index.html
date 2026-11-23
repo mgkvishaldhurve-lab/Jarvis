@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080d19" />
+  <title>JARVIS AI — Your Personal AI Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-mark">J</div><div><strong>JARVIS AI</strong><small>Personal Assistant</small></div></div>
+      <button class="new-chat" id="newChat">＋ नया चैट</button>
+      <div class="side-label">आपकी बातचीत</div>
+      <div class="chat-list" id="chatList"><div class="chat-item active">✦ नई बातचीत</div></div>
+      <div class="sidebar-foot">Version 1.0 · Preview</div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn" aria-label="मेन्यू">☰</button>
+        <div class="top-title">JARVIS <span>AI</span></div>
+        <div class="status"><i></i> Preview mode</div>
+      </header>
+
+      <section class="conversation" id="conversation">
+        <div class="welcome" id="welcome">
+          <div class="orb"><div class="orb-core">J</div></div>
+          <p class="eyebrow">YOUR PERSONAL AI ASSISTANT</p>
+          <h1>नमस्ते! मैं <span>JARVIS</span> हूँ।</h1>
+          <p class="welcome-copy">आज मैं आपकी किस तरह मदद कर सकता हूँ?</p>
+          <div class="suggestions">
+            <button class="suggestion">💡 AI क्या होता है? समझाओ</button>
+            <button class="suggestion">✍️ एक शानदार हिंदी कैप्शन लिखो</button>
+            <button class="suggestion">📚 गिन्नौरगढ़ का परिचय बताओ</button>
+          </div>
+        </div>
+        <div class="messages" id="messages" aria-live="polite"></div>
+      </section>
+
+      <footer class="composer-wrap">
+        <form class="composer" id="chatForm">
+          <textarea id="prompt" rows="1" placeholder="JARVIS से कुछ भी पूछें..." aria-label="अपना संदेश लिखें"></textarea>
+          <button class="send-btn" type="submit" aria-label="भेजें">➤</button>
+        </form>
+        <p class="disclaimer">यह शुरुआती डिज़ाइन प्रीव्यू है। असली AI जवाब पाने के लिए सुरक्षित API कनेक्शन अगला चरण है।</p>
+      </footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
