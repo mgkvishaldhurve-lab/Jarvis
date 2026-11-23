@@ -64,7 +64,18 @@ function addMessage(text, role, save = true) {
 }
 
 // VOICE REPLY
-function speak(text) {
+function speak(text) { function speak(text) {
+  if (!('speechSynthesis' in window)) return;
+
+  window.speechSynthesis.cancel();
+
+  const speech = new SpeechSynthesisUtterance(text);
+  speech.lang = 'hi-IN';
+  speech.rate = 0.95;
+  speech.pitch = 1;
+
+  window.speechSynthesis.speak(speech);
+}
   if (!('speechSynthesis' in window)) return;
 
   window.speechSynthesis.cancel();
