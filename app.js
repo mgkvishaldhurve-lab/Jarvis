@@ -298,3 +298,15 @@ function restoreHistory() {
 
 restoreHistory();
 updateChatList();
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("./service-worker.js")
+      .then((registration) => {
+        console.log("JARVIS Service Worker Active:", registration.scope);
+      })
+      .catch((error) => {
+        console.log("Service Worker Error:", error);
+      });
+  });
+}
